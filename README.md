@@ -83,7 +83,7 @@ semester, nilai)
 
 1. Membuat tabel mahasiswa (nim, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos, no_hp, kd_ds).
 
-    ```sh
+    ```sql
     CREATE TABLE nama_tabel (field1,...,fieldn) VALUE
     (value1 tipe_data(ukuran),...,(valuen tipe_data(ukuran))
     );
@@ -94,7 +94,7 @@ semester, nilai)
 
 2. Membuat kolom **nim** pada tabel mahasiswa menjadi sebuah **PRIMARY KEY**
 
-    ```sh
+    ```sql
     ALTER TABLE nama_tabel ADD PRIMARY KEY (nama_field);
     ```
 
@@ -103,7 +103,7 @@ semester, nilai)
 
 3. Membuat VALUE pada kolom **nim** menjadi AUTO_INCREMENT
 
-    ```sh
+    ```sql
     ALTER TABLE nama_tabel MODIFY nama_field tipe_data(ukuran)
     AUTO_INCREMENT;
     ```
@@ -113,7 +113,7 @@ semester, nilai)
 
 4. Membuat tabel dosen
 
-    ```sh
+    ```sql
     CREATE TABLE nama_tabel (field1,...,fieldn) VALUE
     (value1 tipe_data(ukuran),...,(valuen tipe_data(ukuran))
     );
@@ -124,7 +124,7 @@ semester, nilai)
 
 5. Membuat kolom **kd_ds** pada tabel dosen menjadi sebuah PRIMARY KEY
 
-    ```sh
+    ```sql
     ALTER TABLE nama_table ADD PRIMARY KEY (nama_field);
     ```
 
@@ -133,7 +133,7 @@ semester, nilai)
 
 6. Membuat kolom **kd_ds** pada tabel mahasiswa menjadi sebuah FOREIGN KEY yang ber-REFERENSI terhadap tabel dosen
 
-    ```sh
+    ```sql
     ALTER TABLE nama_tabel ADD CONSTRAINT nama_constraint
     FOREIGN KEY (nama_kolom) REFERENCES
     nama_tabel_referensi(nama_kolom_referensi);
@@ -144,7 +144,7 @@ semester, nilai)
 
 7. Membuat tabel matakuliah (kd_mk, nama, sks)
 
-    ```sh
+    ```sql
     CREATE TABLE nama_tabel (field1,...,fieldn) VALUE
     (value1 tipe_data(ukuran),...,(valuen tipe_data(ukuran))
     );
@@ -155,7 +155,7 @@ semester, nilai)
 
 8. Membuat kolom **kd_mk** pada tabel matakuliah menjadi sebuah PRIMARY KEY
 
-    ```sh
+    ```sql
     ALTER TABLE nama_table ADD PRIMARY KEY (nama_field);
 
     ```
@@ -164,7 +164,7 @@ semester, nilai)
 
 9. Membuat tabel jadwalmengajar (kd_ds, kd_mk, hari, jam, ruang)
 
-    ```sh
+    ```sql
     CREATE TABLE nama_tabel (field1,...,fieldn) VALUE
     (value1 tipe_data(ukuran),...,(valuen tipe_data(ukuran))
     );
@@ -175,7 +175,7 @@ semester, nilai)
 
 10. Membuat kolom **kd_ds** dan **kd_mk** pada tabel jadwalmengajar menjadi sebuah PRIMARY KEY
 
-    ```sh
+    ```sql
     ALTER TABLE nama_table ADD PRIMARY KEY (kolom1,...,kolomn);
     ```
 
@@ -184,7 +184,7 @@ semester, nilai)
 
 11. Membuat kolom **kd_ds** pada tabel jadwalmengajar menjadi sebuah FOREIGN KEY yang ber-REFERENSI terhadap tabel dosen
 
-    ```sh
+    ```sql
     ALTER TABLE nama_tabel ADD CONSTRAINT nama_constraint
     FOREIGN KEY (nama_kolom) REFERENCES
     nama_tabel_referensi(nama_kolom_referensi);
@@ -195,7 +195,7 @@ semester, nilai)
 
 12. Membuat tabel krsmahasiswa (nim, kd_mk, kd_ds, semester, nilai)
 
-    ```sh
+    ```sql
     CREATE TABLE nama_tabel (field1,...,fieldn) VALUE
     (value1 tipe_data(ukuran),...,(valuen tipe_data(ukuran))
     );
@@ -206,7 +206,7 @@ semester, nilai)
 
 13. Membuat kolom **nim, kd_mk, kd_ds** menjadi sebuah PRIMARY KEY dan juga sekaligus FOREIGN KEY yang ber-REFERENSI terhadap masing-masing tabel
 
-    ```sh
+    ```sql
     CREATE TABLE nama_tabel (field1 tipe_data1,...,fieldn tipe_datan,
     PRIMARY KEY (nim, kd_mk, kd_ds),
     FOREIGN KEY (nim) REFERENCES mahasiswa(nim),
@@ -220,7 +220,7 @@ semester, nilai)
 
 14. Menambah atau memasukkan data ke dalam sebuah tabel
 
-    ```sh
+    ```sql
     INSERT INTO <table_name> (filed1,...,fieldn) VALUE (val1,...,valn);
     ```
 
@@ -230,7 +230,7 @@ semester, nilai)
 
 15. Melihat data di dalam tabel
 
-    ```sh   
+    ```sql  
     SELECT * FROM nama_tabel;
     ```
 
@@ -239,7 +239,7 @@ semester, nilai)
 
 16. Mengubah data di dalam tabel
 
-    ```sh
+    ```sql
     UPDATE <table_name> SET [field1=val1,..,fieldn=valn] WHERE <kondisi>
     ```
 
@@ -248,7 +248,7 @@ semester, nilai)
 
 17. Menampilkan satu baris data sesuai kondisi
 
-    ```sh
+    ```sql
     SELECT * FROM <table_name> WHERE <kondisi>
     ```
 
@@ -257,7 +257,7 @@ semester, nilai)
 
 18. Menghapus data dalam sebuah tabel
 
-    ```sh
+    ```sql
     DELETE FROM <table_name> WHERE <kondisi>
     ```
 
@@ -266,7 +266,7 @@ semester, nilai)
 
 19. Menampilkan sebuah data dengan kondisi selisih umur
 
-    ```sh
+    ```sql
     SELECT * FROM <table_name> WHERE TIMESTAMPDIFF (YEAR, tgl_lahir, 
     CURDATE()) < usia;
     ```
@@ -276,7 +276,7 @@ semester, nilai)
 
 20. Menampilkan data sesuai field atau kolom yang diinginkan
 
-    ```sh 
+    ```sql
     SELECT <field1,...,fieldn> FROM <nama_tabel>;
     ```
 
@@ -287,7 +287,7 @@ semester, nilai)
 
 21. Menampilkan data terurut berdasarkan acuan
 
-    ```sh
+    ```sql
     SELECT * FROM <table_name> WHERE ORDER BY <acuan>
     ```
 
