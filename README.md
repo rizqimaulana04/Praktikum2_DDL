@@ -1,7 +1,7 @@
 # Praktikum2_DDL
 
 ## **DDL (Data Definition Language) & DML (Data Manipulation Language)**
-![img](Gambar/ERD.png)      
+![img](gambar/ERD.png)      
 Transform **ER-D** ke dalam **Mapping Table**            
 * **Data Model Mapping**        
     - **Mahasiswa** (**nim**, nama, jenis_kelamin, tgl_lahir, jalan, kota, kodepos, no_hp, kd_ds)     
